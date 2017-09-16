@@ -1,8 +1,8 @@
 function joinStyles() {
   var args = Array.prototype.slice.call(arguments);
-  var styles = { };
+  var styles = {};
 
-  if( (typeof args[0] === "object") && (args[0] !== null) ) {
+  if (typeof args[0] === "object" && args[0] !== null) {
     styles = args.shift();
   }
 
@@ -22,7 +22,8 @@ function joinStyles() {
     classNames.push(className);
   }
 
-  return classNames.join(' ');
+  return classNames.join(" ");
 }
 
 module.exports = joinStyles;
+module.exports.default = joinStyles;
